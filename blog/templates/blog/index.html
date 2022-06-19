@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Awesome Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="/media/style.css">
+</head>
+<body>
+    <header class="blog_header">
+        <div class="blog_logo">
+            <a href="/">
+                <img src="/media/design_photos/logo.svg" alt="logo">
+            </a>
+        </div>
+
+        <nav class="blog_nav">
+            <ul class="blog_menu">
+                <li><a href="/home">Home</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/contact/">Contact</a></li>
+                <li><a href="#">Hire Designers</a></li>
+                <li><a href="#">Go Pro</a></li>
+            </ul>
+        </nav>
+
+        <div class="banner">
+            <p class="banner_first_line">Explore the world’s </br>
+            leading design portfolios</p>
+            <h6>Millions of designers and agencies around the world showcase their portfolio work on </br>Dribbble - the home to the world’s best design and creative professionals.</h6>
+            <a><img src="/media/design_photos/banner.webp"></a>
+        </div>
+    </header>
+    <section class="section">
+    {% for card in cards %}
+        <div class="card">
+            <div class="div_card_image">
+                <a> <img class="img_card_image" src="/media/design_photos/card1.webp"></a>
+            </div>
+            <div class="user_info">
+                <a>
+                    <i class="fa-solid fa-user"></i>
+                    <span class="name"> {{card.name}}</span>
+                </a>
+            </div>
+            <div class="count">
+                <div>
+                    <i class="fa-solid fa-heart"></i>
+                    <span>{{card.like}}</span>
+                </div>
+                <div>
+                    <i class="fa-solid fa-eye"></i>
+                    <span>{{card.view}}</span>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+
+
+    </section>
+</body>
+</html>
