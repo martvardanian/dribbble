@@ -399,7 +399,7 @@ html, body {
     }
 
     .user_info {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .img_card_image {
@@ -413,8 +413,24 @@ html, body {
         margin-left: 100px;
     }
     .banner img {
-    height: 290px;
+        height: 290px;
 }
+    .card_header {
+        margin-left: 300px;
+        font-size: 12px;
+    }
+    .card_img_text {
+    margin: 20px 120px;
+}
+    .card_img_text img {
+            width: 800px;
+    }
+    .post_count {
+    margin-left: 120px;
+    }
+    .card_img_text p {
+    font-size: 16px;
+    }
 }
 @media only screen and (max-width: 768px) {
     .blog_nav {
