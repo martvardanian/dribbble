@@ -13,3 +13,8 @@ def contact(request):
 
 def about(request):
     return render(request, 'static/about.html')
+
+
+def post(request):
+    cards = Cards.objects.all()
+    return render(request, 'blog/full.html', { "cards": cards})

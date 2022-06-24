@@ -19,6 +19,7 @@
                 <img src="/media/design_photos/logo.svg" alt="logo">
             </a>
         </div>
+
         <nav class="blog_nav">
             <ul class="blog_menu">
                 <li><a href="/home">Home</a></li>
@@ -30,46 +31,59 @@
             </ul>
         </nav>
     </header>
-
-    <section class="container_about">
-        <div class="about_card_about">
-            <div class="about_card_text">
-                <h1>The Heart of the Designer Community</h1>
-                <p>We’re on a mission to build the world’s best community for creatives to share, grow, and get hired.</p>
+    <section class="post">
+        <div class="card_header">
+             <div class="post_user_info">
+                <a>
+                    <i class="fa-solid fa-user"></i>
+                    <span class="post_name"> Agriculture App Design Concept</span>
+                </a>
             </div>
-            <div class="about_card_image">
-                <img src="/media/design_photos/about1.jpg" alt="img">
-            </div>
-        </div>
-        <div class="about_card_about">
-            <div class="about_card_text">
-                <h1>Over 1 trillion pixels shared. What are you working on?</h1>
-                <p>Tens of millions of people look for design inspiration and feedback on Dribbble. We help players like you share small screenshots (shots) to show off your current projects, boost your portfolio, and love what you do—no matter what kind of creative professional you are.</p>
-            </div>
-            <div class="about_card_image">
-                <img src="/media/design_photos/about2.jpg" alt="img">
+            <div class="post_count">
+                <div>
+                    <i class="fa-solid fa-heart"></i>
+                    <span>124</span>
+                    <i class="fa-solid fa-eye"></i>
+                    <span>254</span>
+                </div>
             </div>
         </div>
-        <div class="about_card_about">
-            <div class="about_card_text">
-                <h1>Community Guidelines</h1>
-                <p>Our Code of Conduct and your pledge to be an upstanding member of the Dribbble community.</p>
-            </div>
-            <div class="about_card_image">
-                <img src="/media/design_photos/about3.jpg" alt="img">
-            </div>
-        </div>
-        <div class="about_card_about">
-            <div class="about_card_text">
-                <h1>Over 1 trillion pixels shared. What are you working on?</h1>
-                <p>Tens of millions of people look for design inspiration and feedback on Dribbble. We help players like you share small screenshots (shots) to show off your current projects, boost your portfolio, and love what you do—no matter what kind of creative professional you are.</p>
-            </div>
-            <div class="about_card_image">
-                <img src="/media/design_photos/about2.jpg" alt="img">
-            </div>
+        <div class="card_img_text">
+            <img src="/media/design_photos/post.webp">
+            <p>
+                Farming doesn't limit your resources to regular tools from wood and metal. This concept represents
+                an app that provides all necessary data for getting heavy crops. </br> </br> </br>
+                It shows a weather forecast, special notes about the user's fields, clear diagrams, and characteristics
+                . Now instead of googling for ten minutes, you can open one app and prepare your crops. </br> </br> </br>
+                Visit the website for more conceptzilla.com
+            </p>
         </div>
     </section>
-
+    <div class="similar_post">
+       {% for card in cards %}
+        <div class="card">
+                <div class="div_card_image">
+                    <a href="/post/"> <img class="img_card_image" src="/media/design_photos/card1.webp"></a>
+                </div>
+            <div class="user_info">
+                <a>
+                    <i class="fa-solid fa-user"></i>
+                    <span class="name"> {{card.name}}</span>
+                </a>
+            </div>
+            <div class="count">
+                <div>
+                    <i class="fa-solid fa-heart"></i>
+                    <span>{{card.like}}</span>
+                </div>
+                <div>
+                    <i class="fa-solid fa-eye"></i>
+                    <span>{{card.view}}</span>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
     <footer class="footer">
         <div class="container_footer">
             <div class="footer_links">
