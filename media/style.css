@@ -365,11 +365,14 @@ html, body {
 
 .similar_post {
     display: grid;
-    grid-template-columns: 1fr 1fr ;
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
     grid-template-areas:
             "card_image card_image"
             "info count";
+    margin: 50px 45px;
+    padding-top: 50px;
+    border-top: 1px solid #d1d1d1;
 }
 
 @media only screen and (max-width: 1808px) {
