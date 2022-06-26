@@ -5,5 +5,5 @@ urlpatterns = [
     path('home/', index),
     path('contact/', contact),
     path('about/', about),
-    path('post/', post)
+    path('post/<id>', post)
 ]

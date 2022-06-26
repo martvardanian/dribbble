@@ -42,7 +42,7 @@
     {% for card in cards %}
         <div class="card">
                 <div class="div_card_image">
-                    <a href="/post/"> <img class="img_card_image" src="/media/design_photos/card1.webp"></a>
+                    <a href="/post/{{card.pk}}"> <img class="img_card_image" src="/media/{{card.image}}"></a>
                 </div>
             <div class="user_info">
                 <a>

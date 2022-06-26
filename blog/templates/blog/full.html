@@ -36,20 +36,20 @@
              <div class="post_user_info">
                 <a>
                     <i class="fa-solid fa-user"></i>
-                    <span class="post_name"> Agriculture App Design Concept</span>
+                    <span class="post_name"> {{card.name}}</span>
                 </a>
             </div>
             <div class="post_count">
                 <div>
                     <i class="fa-solid fa-heart"></i>
-                    <span>124</span>
+                    <span>{{card.like}}</span>
                     <i class="fa-solid fa-eye"></i>
-                    <span>254</span>
+                    <span>{{card.view}}</span>
                 </div>
             </div>
         </div>
         <div class="card_img_text">
-            <img src="/media/design_photos/post.webp">
+            <img src="/media/{{card.image}}">
             <p>
                 Farming doesn't limit your resources to regular tools from wood and metal. This concept represents
                 an app that provides all necessary data for getting heavy crops. </br> </br> </br>
